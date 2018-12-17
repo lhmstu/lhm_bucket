@@ -14,15 +14,13 @@
         "luarocks\\luarocks-admin.bat",
         "luarocks\\luarocksw.bat"
     ],
-    "installer": {
-        "file": "setup\\install.bat",
-        "keep": "true",
-        "args": [
-            "/SELFCONTAINED",
-            "/P $dir\\luarocks",
-            "/NOADMIN",
-            "/Q"
-        ]
+     "installer": {
+    	"script": "
+    		$luaBin = \"$(appsdir $global)\\lua\\current\"
+    		$luaLib = \"$(appsdir $global)\\lualib\\current\"
+    		$luaInc = \"$(appsdir $global)\\lualib\\current\\include\"
+    		& \"$dir\\setup\\install.bat\" /SELFCONTAINED /P $dir\\luarocks /NOADMIN /Q /BIN $luaBin /INC $luaInc /LIB $luaLib
+    	"
     },
     "checkver": {
         "url": "https://luarocks.github.io/luarocks/releases/",
