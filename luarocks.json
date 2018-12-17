@@ -1,7 +1,7 @@
 {
-    "version": "2.4.2",
+    "version": "3.0.4",
     "license": "MIT",
-    "url": "https://luarocks.github.io/luarocks/releases/luarocks-2.4.2-win32.zip",
+    "url": "http://luarocks.github.io/luarocks/releases/luarocks-3.0.4-windows-32.zip",
     "hash": "63abc6f1240e0774f94bfe4150eaa5be06979c245db1dd5c8ddc4fb4570f7204",
     "pre_install": "
         Get-ChildItem $dir -Filter luarocks-*-win32 | Rename-Item -NewName \"setup\"
@@ -14,7 +14,7 @@
         "luarocks\\luarocks-admin.bat",
         "luarocks\\luarocksw.bat"
     ],
-     "installer": {
+    "installer": {
     	"script": "
     		$luaBin = \"$(appsdir $global)\\lua\\current\"
     		$luaLib = \"$(appsdir $global)\\lualib\\current\"
